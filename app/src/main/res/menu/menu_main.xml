@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemFive"
+        android:title="@string/meeting"
+        android:icon="@drawable/ic_handshake" />
+
+    <item
+        android:id="@+id/itemFour"
+        android:title="@string/requests"
+        android:icon="@drawable/ic_people_black_24dp" />
+
+    <item
+        android:id="@+id/itemThree"
+        android:title="@string/ads"
+        android:icon="@drawable/ic_megaphone_filled" />
+
+    <item
+        android:id="@+id/itemTow"
+        android:title="@string/notification"
+        android:icon="@drawable/ic_notifications_black_24dp" />
+
+    <item
+        android:id="@+id/itemOne"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search_black_24dp"
+        />
+</menu>

@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="mbeeseals.com.mbeedeals.signUpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_bar"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Name"
+                android:hint="@string/Name"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Email"
+                android:hint="@string/Email"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                >
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:defaultNameCode="SA"   />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/PhoneNumber"
+                    android:hint="@string/Phone"
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:inputType="number"
+
+                    />
+
+
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Password"
+                android:hint="@string/password"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:gravity="right"
+                android:textAlignment="gravity"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Password_confirmed"
+                android:hint="@string/confirm_password"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:gravity="right"
+                android:textAlignment="gravity"
+                android:layout_marginTop="@dimen/layout_marginTop"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <Button
+                    android:text="@string/Register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_Button"
+                    android:id="@+id/register"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/LinearLayout_Margin"
+                    android:layout_marginBottom="@dimen/LinearLayout_Margin"
+                    android:gravity="center"
+                    >
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/horizontal_height"
+                        android:background="@color/horizontal_line"
+                        android:layout_weight=".45"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".10"
+                        android:text="أو"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/text_defualt"
+                        android:textColor="@color/horizontal_line"
+
+                        />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/horizontal_height"
+                        android:background="@color/horizontal_line"
+                        android:layout_weight=".45"
+                        />
+
+                </LinearLayout>
+                <com.google.android.gms.common.SignInButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/google"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

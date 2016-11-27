@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Mbeedeals</string>
+    <string name="Sign_up">التسجيل</string>
+    <string name="Sign_in">تسجيل الدخول</string>
+    <string name="Name">الأسم</string>
+    <string name="Email">البريد الإلكتروني</string>
+    <string name="Phone">رقم الجوال</string>
+    <string name="password">كلمة السر</string>
+    <string name="confirm_password">تأكيد كلمة السر</string>
+    <string name="Register">تسجيل</string>
+    <string name="google">التسجيل باستخدام Google</string>
+    <string name="google_sign_in">تسجيل الدخول باستخدام Google</string>
+    <string name="guaranteed">مؤكدة</string>
+    <string name="unguranteed">غير مؤكدة</string>
+    <string name="search">بحث</string>
+    <string name="ads">إعلانتي</string>
+    <string name="requests">طلباتي</string>
+    <string name="meeting">لقاءاتي</string>
+    <string name="notification">تنبيهات</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "938874415413",
+    "project_id": "firebase-mbeedeals"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938874415413:android:c2ae9bdf3efb5103",
+        "android_client_info": {
+          "package_name": "mbeeseals.com.mbeedeals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938874415413-0kn3840evfdqruo6mfovbl8mdro23h8i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mbeeseals.com.mbeedeals",
+            "certificate_hash": "944270E6FBA69FCB9FA58CE6FA26C7D6F712D232"
+          }
+        },
+        {
+          "client_id": "938874415413-2d5nsh78jru6j6umbhvpbjl0u8jj1fl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnOq1UU9sZ5l8_-Y-7a1_Z_pbyMlWA4s0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
