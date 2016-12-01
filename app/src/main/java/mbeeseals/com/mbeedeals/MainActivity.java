@@ -12,6 +12,8 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabReselectListener;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import net.alhazmy13.catcho.library.Catcho;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onCreate (Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
+            Thread.setDefaultUncaughtExceptionHandler(new Catcho.Builder(this).recipients("bushraawwad93@gmail.com").build());
             setContentView(R.layout.activity_main);
 
             Toolbar title_bar = (Toolbar) findViewById(R.id.title_bar);

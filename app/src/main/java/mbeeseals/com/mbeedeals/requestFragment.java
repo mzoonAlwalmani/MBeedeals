@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,14 +34,33 @@ public class requestFragment  extends Fragment {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_request, container, false);
 
+        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
+        tabLayout.addTab(tabLayout.newTab().setText("مؤكدة"));
+        tabLayout.addTab(tabLayout.newTab().setText("غير مؤكده"));
 
-        viewPager= (ViewPager) view.findViewById(R.id.viewpager);
-        ft = new SampleFragmentPagerAdapter(getChildFragmentManager() , view.getContext());
-        viewPager.setAdapter(ft);
+        final TextView text = (TextView) view.findViewById(R.id.textView) ;
+        text.setText("مؤكدة");
 
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if(tabLayout.getSelectedTabPosition() == 0){
+                  text.setText("مؤكدة");
+                }else if(tabLayout.getSelectedTabPosition() == 1) {
+                    text.setText("غير مؤكدة");
+                }}
 
+        @Override
+        public void onTabUnselected(TabLayout.Tab tab) {
+
+        }
+
+        @Override
+        public void onTabReselected(TabLayout.Tab tab) {
+
+        }}
+
+        );
         return view;
     }
 
