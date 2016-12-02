@@ -39,7 +39,7 @@ public class requestFragment  extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText("غير مؤكده"));
 
         final TextView text = (TextView) view.findViewById(R.id.textView) ;
-        text.setText("مؤكدة");
+        text.setText("مؤكدة جدا");
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
