@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مزون الولماني"
+                android:textSize="@dimen/text_defualt"
+                android:layout_gravity="right"
+
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                >
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call_black_24dp"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_message_black_24dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+       <ImageButton
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:src="@drawable/flag_algeria"
+
+           />
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="يرغب بلقائك لاتمام عميلة شراء "/>
+
+    <Button
+        android:id="@+id/thing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="كرسي خشب"
+        android:textColor="#ff0000ff"
+        style="?android:attr/borderlessButtonStyle"/>
+
+
+    <Button
+        android:id="@+id/btn_photo_lib"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="اضعط لعرض تفاصيل اللقاء" />
+
+</LinearLayout>
