@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="right"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:background="@color/horizontal_line"
         android:gravity="right"
-        android:background="@color/horizontal_line">
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:paddingRight="10dp"
+            android:orientation="vertical"
             android:paddingLeft="10dp"
-            >
+            android:paddingRight="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="مزون الولماني"
-                android:textColor="black"
-                android:textSize="25dp"
                 android:layout_gravity="right"
+                android:text="مزون الولماني"
+                android:textColor="#000000"
+                android:textSize="25dp"
 
                 />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="right"
-                >
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_email_black_24dp"/>
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_message_black_24dp"/>
+                    android:src="@drawable/ic_email_black_24dp" />
 
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_call_black_24dp"/>
+                    android:src="@drawable/ic_message_black_24dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call_black_24dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -70,131 +69,133 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="موعداللقاء"
-            android:textColor="black"
-            android:textSize="@dimen/text_defualt"
-            android:layout_gravity="center"
-            android:id="@+id/textView2" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="right"
-            android:layout_marginTop="10dp">
-
+            >
             <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="3-11-2017"
-                android:textSize="@dimen/text_defualt"
-                android:gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:gravity="right"
                 android:text="التاريخ"
-                android:textColor="black"
-                android:textSize="@dimen/text_defualt"/>
+                android:textSize="15dp"
+                android:paddingRight="30dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="3-11-2017"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-        </LinearLayout>
 
-        <LinearLayout
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="right"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="3:00"
-                android:textSize="@dimen/text_defualt"
-                android:gravity="center"/>
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:text="الساعة"
-                android:textColor="black"
-                android:textSize="@dimen/text_defualt"/>
+                android:textSize="15dp"
+                android:paddingRight="30dp"/>
 
-        </LinearLayout>
+        </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="right"
-            android:layout_marginTop="10dp">
-            <view
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="100dp"/>
+            >
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="right"
                 android:text="الموقع"
-                android:textColor="black"
-                android:textSize="@dimen/text_defualt"/>
+                android:textSize="15dp"
+                android:paddingRight="30dp"
+                android:id="@+id/textView4" />
 
         </LinearLayout>
 
-        <LinearLayout
+        <View
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="right"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="center_horizontal"
+                android:text="الطلب"
+                android:textSize="15dp"
+                android:paddingRight="30dp"/>
 
             <Button
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_defualt"
-                android:text="كرسي خشب"
-                android:textColor="#ff0000ff"
-                style="?android:attr/borderlessButtonStyle"/>
-
-            <TextView
+                android:id="@+id/button2"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="الطلب"
-                android:textColor="black"
-                android:textSize="@dimen/text_defualt"/>
+                android:gravity="center"
+                android:text="كرسي خشب"
+                android:layout_gravity="right"
+                android:textColor="#ff0000ff"
+                android:textSize="20dp" />
 
-        </LinearLayout>
+
+
+        </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            >
+            android:paddingRight="10dp">
+
             <Button
+                android:id="@+id/Sign_in"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/Sign_in"
+                android:background="@color/colorPrimary"
                 android:text="غير مناسب"
-                android:textSize="@dimen/text_Button"
-                android:background="@color/colorPrimary"/>
+                android:textSize="@dimen/text_Button" />
+
             <View
                 android:layout_width="0dp"
                 android:layout_height="@dimen/horizontal_height"
-                android:layout_weight=".05"
-                />
+                android:layout_weight=".05" />
+
             <Button
+                android:id="@+id/Sign_up"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/Sign_up"
+                android:background="@color/colorPrimary"
                 android:text="مناسب"
-                android:textSize="@dimen/text_Button"
-                android:background="@color/colorPrimary"/>
+                android:textSize="@dimen/text_Button" />
 
         </LinearLayout>
     </LinearLayout>
