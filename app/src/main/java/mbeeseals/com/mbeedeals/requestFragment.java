@@ -16,8 +16,6 @@ import android.widget.Toast;
  */
 public class requestFragment  extends Fragment {
 
-    ViewPager viewPager;
-    SampleFragmentPagerAdapter ft;
 
     public static requestFragment newInstance(int instance) {
         Bundle args = new Bundle();
