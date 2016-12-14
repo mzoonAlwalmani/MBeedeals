@@ -2,6 +2,7 @@ package mbeeseals.com.mbeedeals;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,8 +27,15 @@ public class dealsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_deals, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_request, container, false);
 
-}
+        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
+        tabLayout.addTab(tabLayout.newTab().setText("إعارة"));
+        tabLayout.addTab(tabLayout.newTab().setText("تبرع"));
+        tabLayout.addTab(tabLayout.newTab().setText("اجار"));
+        tabLayout.addTab(tabLayout.newTab().setText("بيع"));
+        tabLayout.addTab(tabLayout.newTab().setText("كل"));
+
+        return view;
+
+    }}
