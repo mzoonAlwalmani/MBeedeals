@@ -11,13 +11,13 @@
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="0dp"
-       android:layout_weight="30"
+       android:layout_weight="55"
        android:id="@+id/thing"></RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="70"
+        android:layout_weight="45"
         >
 <ListView
     android:layout_width="match_parent"
