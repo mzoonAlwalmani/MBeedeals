@@ -31,7 +31,7 @@
                 android:layout_weight="25"
                 android:text="العنوان"
                 android:textSize="@dimen/text_defualt"
-
+                android:textColor="#000000"
                 />
         </TableRow>
         <TableRow
@@ -54,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:text="الوصف"
                 android:textSize="@dimen/text_defualt"
+                android:textColor="#000000"
                 />
         </TableRow>
         <TableRow
@@ -75,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="الحالة"
                 android:textSize="@dimen/text_defualt"
+                android:textColor="#000000"
                 />
         </TableRow>
         <TableRow
@@ -97,6 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="التصنيف"
                 android:textSize="@dimen/text_defualt"
+                android:textColor="#000000"
                 />
         </TableRow>
         <TableRow
@@ -119,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="نوع المعاملة"
                 android:textSize="@dimen/text_defualt"
+                android:textColor="#000000"
                 />
         </TableRow>
         <TableRow
@@ -131,28 +135,26 @@
                 android:gravity="right"
                 android:layout_width="0dp"
                 android:layout_weight="75"
-                android:orientation="vertical"
                 >
-                <EditText
-                    android:layout_height="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:maxLines="1"
-                    android:paddingBottom="3dp"
-                    >
-                </EditText>
-
                 <RadioButton
                     android:text="قابل للتفاوض"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:id="@+id/radioButton"
+                    android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton"
                     android:layoutDirection="rtl"
                     android:textAlignment="textStart"
                     android:layout_gravity="start"
                     />
 
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    >
+                </EditText>
 
             </LinearLayout>
 
@@ -162,6 +164,7 @@
                 android:layout_height="wrap_content"
                 android:text="السعر"
                 android:textSize="@dimen/text_defualt"
+                android:textColor="#000000"
                 />
         </TableRow>
         <TableRow
@@ -170,45 +173,14 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:paddingBottom="15dp">
-            <LinearLayout
-                android:layout_height="fill_parent"
-                android:layout_width="0dp"
-                android:layout_weight="60"
-                android:orientation="vertical"
-                >
-                <LinearLayout
-                    android:gravity="right"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    >
-                    <Button
-                        android:id="@+id/home"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="بيتي"
-                        android:layout_gravity="top"
-                        android:padding="0dp"
-                        style="?android:attr/borderlessButtonStyle"/>
-                    <ImageButton
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:src="@drawable/ic_location_on_black_24dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:gravity="right"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    >
+
                     <Button
                         android:id="@+id/another_location"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
-                        android:text="حدد مكان اخر"
+                        android:text="تحديد مكان اللقاء"
+                        android:textColor="#ff0000ff"
                         android:padding="0dp"
                         style="?android:attr/borderlessButtonStyle"/>
                     <ImageButton
@@ -216,36 +188,23 @@
                         android:layout_width="wrap_content"
                         android:src="@drawable/ic_location_on_black_24dp"
                         />
-                </LinearLayout>
-            </LinearLayout>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="40"
-                android:layout_height="wrap_content"
-                android:text="مكان اللقاء"
-                android:textSize="@dimen/text_defualt"
-                />
+
         </TableRow>
         <TableRow
             android:gravity="center"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:paddingBottom="15dp">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/cancel"
-                android:text="إلغاء"
-                android:textSize="@dimen/text_Button"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/ok"
-                android:text="موافق"
-                android:textSize="@dimen/text_Button"/>
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+             <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="حفظ الاعلان"
+                    android:textSize="@dimen/text_Button" />
         </TableRow>
 
     </LinearLayout>

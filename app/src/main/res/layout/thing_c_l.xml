@@ -32,7 +32,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-        <TextView
+         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -47,8 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:text=" مصنوع من اجود انواع الخشب صالح لكافه انواع الاستعملات.."
-        android:textSize="25dp"
+        android:text=" مصنوع من اجود انواع الخشب صالح لكافه انواع الاستعمالات.."
+        android:textSize="20dp"
         android:gravity="right"
         android:layout_gravity="center_vertical|right"
         />
