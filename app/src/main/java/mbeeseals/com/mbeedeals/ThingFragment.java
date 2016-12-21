@@ -14,8 +14,12 @@ import android.view.ViewGroup;
 public class ThingFragment extends Fragment {
 
 
-    public ThingFragment() {
-        // Required empty public constructor
+    public static ThingFragment newInstance(int instance) {
+        Bundle args = new Bundle();
+        args.putInt("argsInstance", instance);
+        ThingFragment firstFragment = new ThingFragment();
+        firstFragment.setArguments(args);
+        return firstFragment;
     }
 
 

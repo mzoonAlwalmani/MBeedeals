@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             //add fragments to list
             fragments.add(SearchFragment.newInstance(0));
             fragments.add(notifacationFragment.newInstance(0));
-            fragments.add(ThingRequestsFragment.newInstance(0));
+            fragments.add(ThingFragment.newInstance(0));
             fragments.add(requestFragment.newInstance(0));
             fragments.add(meetupFragment.newInstance(0));
 
