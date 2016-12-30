@@ -7,7 +7,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:background="@color/horizontal_line"
         android:gravity="right"
         android:orientation="horizontal">
@@ -32,17 +31,25 @@
                 />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="right"
-                android:orientation="vertical">
+                android:layout_gravity="right"
+                android:orientation="horizontal">
 
-
-                <TextView
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="الظهران,الدوحة الشمالية"
-                    android:textSize="20dp" />
+                    android:src="@drawable/ic_email_black_24dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_message_black_24dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_call_black_24dp" />
 
             </LinearLayout>
         </LinearLayout>
@@ -65,24 +72,25 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            >
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right"
+                android:text="الاسم"
+                android:textSize="15dp"
                 android:paddingRight="30dp"
-                android:text="طريقة التسليم"
-                android:textSize="15dp" />
-
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="يدا بيد"
+                android:text="بشرى العواد"
                 android:textColor="#000000"
                 android:textSize="20dp" />
+
 
 
         </RelativeLayout>
@@ -96,20 +104,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="10 س.ر"
+                android:text="12345678910"
                 android:textColor="#000000"
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:gravity="right"
-                android:paddingRight="30dp"
-                android:text="العرض المقدم"
-                android:textSize="15dp" />
+                android:text="رقم الحساب"
+                android:textSize="15dp"
+                android:paddingRight="30dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SA 000 12345678910"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="IBAN"
+                android:textSize="15dp"
+                android:paddingRight="30dp"/>
 
         </RelativeLayout>
 
@@ -120,31 +148,55 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="الظهران "
-                android:textColor="#000000"
-                android:textSize="20dp" />
+                android:gravity="right"
+                android:layout_gravity="center_horizontal"
+                android:text="السعر"
+                android:textSize="15dp"
+                android:paddingRight="30dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="20dp"
                 android:layout_alignParentTop="true"
-                android:gravity="right"
-                android:paddingRight="30dp"
-                android:text="العنوان"
-                android:textSize="15dp" />
-
+                android:layout_alignParentStart="true" />
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="center_horizontal"
+                android:text="الطلب"
+                android:textSize="15dp"
+                android:paddingRight="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="كرسي خشب"
+                android:textColor="#ff0000ff"
+                android:textSize="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView8" />
 
 
-
-
-
-
-
-
+        </RelativeLayout>
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:text="ارفاق ايصال الدفع"
+            android:textSize="@dimen/text_Button" />
 
     </LinearLayout>
 
@@ -152,7 +204,6 @@
         android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp">
 
@@ -162,7 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
-            android:text="رفض"
+            android:text="_____"
             android:textSize="@dimen/text_Button" />
 
         <View
@@ -176,25 +227,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorPrimary"
-            android:text="قبول"
+            android:text="تاكيد الدفع"
             android:textSize="@dimen/text_Button" />
 
     </LinearLayout>
 
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="الغاء"
-            android:textSize="@dimen/text_Button" />
-    </LinearLayout>
 </LinearLayout>
