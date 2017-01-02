@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
     <item
         android:id="@+id/itemFive"
         android:title="الملف الشخصي"
-        android:icon="@drawable/ic_account_box_black_24dp"/>
+        android:icon="@drawable/ic_account_box_black_24dp"
+        />
 
     <item
         android:id="@+id/itemFour"

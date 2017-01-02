@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.MenuBuilder;
+import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -24,6 +26,8 @@ import net.alhazmy13.catcho.library.Catcho;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.security.AccessController.getContext;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView title = (TextView) findViewById(R.id.mytext);
         final ImageButton menu = (ImageButton) findViewById(R.id.menu);
-
+        final View m = (View) findViewById(R.id.k);
 
 
         //FragNav
@@ -123,8 +127,11 @@ public class MainActivity extends AppCompatActivity {
                          return true;
                      }
                  });
+                 MenuPopupHelper menuHelper = new MenuPopupHelper(MainActivity.this,(MenuBuilder) popup.getMenu(), menu);
+                 menuHelper.setForceShowIcon(true);
+                 menuHelper.show();
 
-                 popup.show();
+
              }
          });}
     @Override
