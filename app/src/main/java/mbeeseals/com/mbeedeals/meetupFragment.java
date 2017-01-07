@@ -29,22 +29,26 @@ public class meetupFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_request, container, false);
+        View view =inflater.inflate(R.layout.fragment_meetup, container, false);
 
         final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.sliding_tabs);
         tabLayout.addTab(tabLayout.newTab().setText("مؤكدة"));
         tabLayout.addTab(tabLayout.newTab().setText("غير مؤكده"));
 
+        final TabLayout tabLayout2 = (TabLayout) view.findViewById(R.id.sliding_tabs2);
+        tabLayout2.addTab(tabLayout2.newTab().setText("شحن"));
+        tabLayout2.addTab(tabLayout2.newTab().setText("لقاء"));
+
         final TextView text = (TextView) view.findViewById(R.id.textView) ;
-        text.setText("مؤكدة جدا");
+        text.setText("مؤكدة");
 
     tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
             if(tabLayout.getSelectedTabPosition() == 0){
-                text.setText("مؤكدة");
+                text.setText("مؤكده");
             }else if(tabLayout.getSelectedTabPosition() == 1) {
-                text.setText("غير مؤكدة");
+                text.setText("غير مؤكده");
             }}
 
         @Override
@@ -58,6 +62,14 @@ public class meetupFragment extends Fragment {
         }}
 
     );
+
+
+
+
+
+
+
+
     return view;
 
 }}

@@ -1,9 +1,10 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="mbeeseals.com.mbeedeals.meetupFragment">
+    tools:context="mbeeseals.com.mbeedeals.meetupFragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/sliding_tabs"
@@ -11,6 +12,21 @@
         android:layout_height="wrap_content"
         app:tabMode="fixed"
         />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <android.support.design.widget.TabLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_tabs2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabIndicatorHeight="4dp"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -19,4 +35,4 @@
         android:textSize="@dimen/text_defualt"
         />
 
-</FrameLayout>
+</LinearLayout>
