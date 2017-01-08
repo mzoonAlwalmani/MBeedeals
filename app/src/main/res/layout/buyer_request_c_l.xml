@@ -10,8 +10,15 @@
         android:layout_marginBottom="10dp"
         android:background="@color/horizontal_line"
         android:gravity="right"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layoutDirection="rtl">
 
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/user4"
+
+            />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -47,12 +54,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageButton
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/user4"
 
-            />
 
     </LinearLayout>
 
@@ -154,7 +156,21 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:paddingRight="10dp"
+        android:layoutDirection="rtl">
+
+        <Button
+            android:id="@+id/Sign_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="قبول"
+            android:textSize="@dimen/text_Button" />
+        <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/horizontal_height"
+        android:layout_weight=".05" />
 
         <Button
             android:id="@+id/Sign_in"
@@ -165,22 +181,7 @@
             android:text="رفض"
             android:textSize="@dimen/text_Button" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/horizontal_height"
-            android:layout_weight=".05" />
-
-        <Button
-            android:id="@+id/Sign_up"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:text="قبول"
-            android:textSize="@dimen/text_Button" />
-
     </LinearLayout>
-
 
     <LinearLayout
 

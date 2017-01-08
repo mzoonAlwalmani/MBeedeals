@@ -16,14 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
+            android:layoutDirection="rtl"
             >
-            <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="70"
-                android:maxLines="1"
-                >
-            </EditText>
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
@@ -32,20 +26,20 @@
                 android:textSize="@dimen/text_defualt"
                 android:textColor="#000000"
                 />
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="70"
+                android:maxLines="1"
+                >
+            </EditText>
         </TableRow>
         <TableRow
             android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:paddingBottom="15dp">
-            <EditText
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="70"
-                android:lines="3"
-                android:maxLines="10"
-                >
-            </EditText>
+            android:paddingBottom="15dp"
+            android:layoutDirection="rtl">
             <TextView
                 android:layout_gravity="top"
                 android:layout_width="0dp"
@@ -54,37 +48,34 @@
                 android:text="الوصف"
                 android:textSize="@dimen/text_defualt"
                 android:textColor="#000000"
-                />
-        </TableRow>
-        <TableRow
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:paddingBottom="15dp"
-            >
-            <Spinner
+                android:id="@+id/textView9" />
+            <EditText
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
-                android:layout_weight="60"
-                android:maxLines="1"
-                android:layoutDirection="rtl"
-                />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="25"
-                android:layout_height="wrap_content"
-                android:text="الحالة"
-                android:textSize="@dimen/text_defualt"
-                android:textColor="#000000"
-                />
-        </TableRow>
-        <TableRow
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:paddingBottom="15dp"
+                android:layout_weight="70"
+                android:lines="3"
+                android:maxLines="10"
+                android:id="@+id/editText3">
+            </EditText>
 
+
+        </TableRow>
+
+        <TableRow
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="15dp"
+            android:layoutDirection="rtl"
             >
+            <TextView
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="wrap_content"
+            android:text="الحالة"
+            android:textSize="@dimen/text_defualt"
+            android:textColor="#000000"
+            />
             <Spinner
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
@@ -92,20 +83,48 @@
                 android:maxLines="1"
                 android:layoutDirection="rtl"
                 />
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="25"
-                android:layout_height="wrap_content"
-                android:text="التصنيف"
-                android:textSize="@dimen/text_defualt"
-                android:textColor="#000000"
-                />
+
         </TableRow>
         <TableRow
             android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:paddingBottom="15dp">
+            android:paddingBottom="15dp"
+            android:layoutDirection="rtl"
+            >
+            <TextView
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="wrap_content"
+            android:text="التصنيف"
+            android:textSize="@dimen/text_defualt"
+            android:textColor="#000000"
+            />
+            <Spinner
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="60"
+                android:maxLines="1"
+                android:layoutDirection="rtl"
+                />
+
+        </TableRow>
+        <TableRow
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="15dp"
+            android:layoutDirection="rtl">
+
+            <TextView
+            android:layout_width="0dp"
+            android:layout_weight="30"
+            android:layout_height="wrap_content"
+            android:text="نوع المعاملة"
+            android:textSize="@dimen/text_defualt"
+            android:textColor="#000000"
+                android:id="@+id/textView10" />
+
             <Spinner
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
@@ -114,24 +133,34 @@
                 android:layoutDirection="rtl"
                 >
             </Spinner>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="30"
-                android:layout_height="wrap_content"
-                android:text="نوع المعاملة"
-                android:textSize="@dimen/text_defualt"
-                android:textColor="#000000"
-                />
+
         </TableRow>
+
         <TableRow
             android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:paddingBottom="15dp">
+            android:paddingBottom="15dp"
+            android:layoutDirection="rtl">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.33"
+                android:layout_height="wrap_content"
+                android:text="السعر"
+                android:textSize="@dimen/text_defualt"
+                android:textColor="#000000"
+                />
+            <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".77"
+            android:maxLines="1"
+            android:paddingBottom="3dp"/>
+
             <LinearLayout
                 android:gravity="right"
                 android:layout_width="0dp"
-                android:layout_weight="70"
+                android:layout_weight=".33"
                 >
                 <RadioButton
                     android:text="قابل للتفاوض"
@@ -144,25 +173,11 @@
                     android:layout_gravity="start"
                     />
 
-                <EditText
-                    android:layout_height="wrap_content"
-                    android:layout_width="0dp"
-                    android:layout_weight="1.5"
-                    android:maxLines="1"
-                    android:paddingBottom="3dp"
-                    >
-                </EditText>
+
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="30"
-                android:layout_height="wrap_content"
-                android:text="السعر"
-                android:textSize="@dimen/text_defualt"
-                android:textColor="#000000"
-                />
+
         </TableRow>
         <TableRow
             android:gravity="center"

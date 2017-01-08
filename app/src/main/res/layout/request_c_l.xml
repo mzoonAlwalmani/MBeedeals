@@ -23,8 +23,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layoutDirection="rtl">
 
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+
+                    android:src="@drawable/che" />
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -102,19 +116,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center">
 
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="170dp"
-                    android:layout_height="170dp"
-
-                    android:src="@drawable/che" />
-            </LinearLayout>
         </LinearLayout>
 
         <Button

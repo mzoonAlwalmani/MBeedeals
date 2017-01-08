@@ -9,8 +9,14 @@
         android:layout_height="wrap_content"
         android:background="@color/horizontal_line"
         android:gravity="right"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layoutDirection="rtl">
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/user4"
 
+            />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -34,7 +40,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layoutDirection="rtl">
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -54,12 +61,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageButton
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/user4"
 
-            />
 
     </LinearLayout>
 
@@ -169,21 +171,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-
-            <Button
-                android:id="@+id/Sign_in"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="غير مناسب"
-                android:textSize="@dimen/text_Button" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="@dimen/horizontal_height"
-                android:layout_weight=".05" />
+            android:paddingRight="10dp"
+            android:layoutDirection="rtl">
 
             <Button
                 android:id="@+id/Sign_up"
@@ -192,6 +181,20 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="مناسب"
+                android:textSize="@dimen/text_Button" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/horizontal_height"
+                android:layout_weight=".05" />
+
+            <Button
+                android:id="@+id/Sign_in"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="غير مناسب"
                 android:textSize="@dimen/text_Button" />
 
         </LinearLayout>
