@@ -1,6 +1,5 @@
 package mbeeseals.com.mbeedeals;
 
-import android.app.VoiceInteractor;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
@@ -9,8 +8,6 @@ import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.view.menu.MenuPopupHelper;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -26,8 +23,6 @@ import net.alhazmy13.catcho.library.Catcho;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static java.security.AccessController.getContext;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         List<Fragment> fragments = new ArrayList<>(5);
 
         //add fragments to list
-        fragments.add(SearchFragment.newInstance(0));
+        fragments.add(signUpFragment.newInstance(0));
         fragments.add(notifacationFragment.newInstance(0));
         fragments.add(ThingFragment.newInstance(0));
         fragments.add(requestFragment.newInstance(0));
