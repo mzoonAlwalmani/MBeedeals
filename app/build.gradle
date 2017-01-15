@@ -32,8 +32,8 @@ dependencies {
     compile 'com.ncapdevi:frag-nav:1.0.3'
     compile 'com.roughike:bottom-bar:2.0.2'
     compile 'net.alhazmy13.Catcho:library:0.1.0-beta'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
-
     testCompile 'junit:junit:4.12'
 
 }

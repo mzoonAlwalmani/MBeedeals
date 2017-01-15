@@ -1,19 +1,26 @@
 package mbeeseals.com.mbeedeals;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.SignInButton;
 
+import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
@@ -33,16 +40,16 @@ public class signUpFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Button signUp =(Button) getView().findViewById(R.id.register);
-     final   EditText name =(EditText) getView().findViewById(R.id.Name);
-        final EditText email =(EditText) getView().findViewById(R.id.Email);
-        final EditText phone =(EditText) getView().findViewById(R.id.PhoneNumber);
-        final EditText password =(EditText) getView().findViewById(R.id.Password);
 
-        TextView title = (TextView) getView().findViewById(R.id.mytext) ;
-        title.setText(R.string.Register);
+        View view =inflater.inflate(R.layout.fragment_sign_up, container, false);
 
-      SignInButton Signup = (SignInButton) getView().findViewById(R.id.google);
+        final Button signUp =(Button) view.findViewById(R.id.register);
+        final EditText name =(EditText) view.findViewById(R.id.Name);
+        final EditText email =(EditText) view.findViewById(R.id.Email);
+        final EditText phone =(EditText) view.findViewById(R.id.PhoneNumber);
+        final EditText password =(EditText) view.findViewById(R.id.Password);
+
+      SignInButton Signup = (SignInButton) view.findViewById(R.id.google);
         setGooglePlusButtonText(Signup , getString(R.string.google));
 
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +57,7 @@ public class signUpFragment extends Fragment {
             public void onClick(View view) {
                 Retrofit retrofit = new Retrofit.Builder()
                         .baseUrl("http://localhost/webservice/")
+                        .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
                 Service service = retrofit.create(Service.class);
@@ -60,12 +68,19 @@ public class signUpFragment extends Fragment {
                 user.setPassword(password.getText().toString());
                 user.setGoogle("0");
                 Call<user> call = service.register(user.getName(),user.getPhone(),user.getEmail(),user.getPassword(),user.getGoogle());
+                try {
+                     call.execute();
+                    Toast.makeText(getActivity(), "jkhhohj;jknhio",
+                            Toast.LENGTH_LONG).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false);
+        return view;
 
 
     }
