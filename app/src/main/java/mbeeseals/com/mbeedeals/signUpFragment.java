@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,11 @@ import android.widget.Toast;
 import com.google.android.gms.common.SignInButton;
 
 import java.io.IOException;
+import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -56,7 +60,7 @@ public class signUpFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://localhost/webservice/")
+                        .baseUrl("http://192.168.1.20/webservice/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -68,13 +72,23 @@ public class signUpFragment extends Fragment {
                 user.setPassword(password.getText().toString());
                 user.setGoogle("0");
                 Call<user> call = service.register(user.getName(),user.getPhone(),user.getEmail(),user.getPassword(),user.getGoogle());
-                try {
-                     call.execute();
-                    Toast.makeText(getActivity(), "jkhhohj;jknhio",
-                            Toast.LENGTH_LONG).show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                call.enqueue(new Callback<user>() {
+                    @Override
+                    public void onResponse(Call<user> call, Response<user> response) {
+                        if (response.isSuccessful()) {
+                            // tasks available
+                        } else {
+                            // error response, no access to resource?
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<user> call, Throwable t) {
+                        // something went completely south (like no internet connection)
+                        Log.d("Error", t.getMessage());
+                    }
+                });
+
             }
         });
 
