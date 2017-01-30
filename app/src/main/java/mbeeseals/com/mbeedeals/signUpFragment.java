@@ -52,6 +52,7 @@ public class signUpFragment extends Fragment {
         final EditText email =(EditText) view.findViewById(R.id.Email);
         final EditText phone =(EditText) view.findViewById(R.id.PhoneNumber);
         final EditText password =(EditText) view.findViewById(R.id.Password);
+        final TextView textView = (TextView) view.findViewById(R.id.msg);
 
       SignInButton Signup = (SignInButton) view.findViewById(R.id.google);
         setGooglePlusButtonText(Signup , getString(R.string.google));
@@ -60,12 +61,30 @@ public class signUpFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.1.20/webservice/")
+                        .baseUrl("http://192.168.1.15/webservice/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
                 Service service = retrofit.create(Service.class);
                 user user= new user();
+                Call<responce> callget = service.getResponce("res","res2");
+                callget.enqueue(new Callback<responce>() {
+                    @Override
+                    public void onResponse(Call<responce> call, Response<responce> response) {
+                        if (response.isSuccessful()) {
+                            textView.setText(response.body().toString());
+                        } else {
+                            // error response, no access to resource?
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<responce> call, Throwable t) {
+                        // something went completely south (like no internet connection)
+                        Log.d("Error", t.getMessage());
+                    }
+                });
+
                 user.setName(name.getText().toString());
                 user.setEmail(email.getText().toString());
                 user.setPhone(phone.getText().toString());
