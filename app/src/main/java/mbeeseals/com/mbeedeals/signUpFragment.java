@@ -16,10 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.SignInButton;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -60,49 +63,36 @@ public class signUpFragment extends Fragment {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Gson gson = new GsonBuilder()
+                        .setLenient()
+                        .create();
+
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.1.15/webservice/")
+                        .baseUrl("http://192.168.1.40/webservice/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
                 Service service = retrofit.create(Service.class);
                 user user= new user();
-                Call<responce> callget = service.getResponce("res","res2");
-                callget.enqueue(new Callback<responce>() {
-                    @Override
-                    public void onResponse(Call<responce> call, Response<responce> response) {
-                        if (response.isSuccessful()) {
-                            textView.setText(response.body().toString());
-                        } else {
-                            // error response, no access to resource?
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<responce> call, Throwable t) {
-                        // something went completely south (like no internet connection)
-                        Log.d("Error", t.getMessage());
-                    }
-                });
-
                 user.setName(name.getText().toString());
                 user.setEmail(email.getText().toString());
                 user.setPhone(phone.getText().toString());
                 user.setPassword(password.getText().toString());
                 user.setGoogle("0");
-                Call<user> call = service.register(user.getName(),user.getPhone(),user.getEmail(),user.getPassword(),user.getGoogle());
-                call.enqueue(new Callback<user>() {
+                Call<responce> call = service.register(user.getName(),user.getPhone(),user.getEmail(),user.getPassword(),user.getGoogle());
+                call.enqueue(new Callback<responce>() {
                     @Override
-                    public void onResponse(Call<user> call, Response<user> response) {
+                    public void onResponse(Call<responce> call, Response<responce> response) {
                         if (response.isSuccessful()) {
-                            // tasks available
+                            textView.setText(response.body().getError()+"  "+response.body().getError2());
+
                         } else {
-                            // error response, no access to resource?
+
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<user> call, Throwable t) {
+                    public void onFailure(Call<responce> call, Throwable t) {
                         // something went completely south (like no internet connection)
                         Log.d("Error", t.getMessage());
                     }
